@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../ui/theme-toggle";
-import { ActiveLink } from "../active-link/active-link";
+import { ActiveLink } from "../active-link";
 
 export function Header() {
   return (
@@ -11,10 +11,12 @@ export function Header() {
           <Link href="/" >Logo</Link>
 
           <nav className="flex items-center gap-6">
+            <ThemeToggle />
             <ActiveLink href="/">Início </ActiveLink>
             <ActiveLink href="/blog">Blog</ActiveLink>
-            <ThemeToggle />
-            <Button variant="secondary">Começar</Button>
+            <Button variant="secondary">
+              <Link href="/comecar">Começar</Link>
+            </Button>
           </nav>
         </div>
       </div>
